@@ -28,41 +28,40 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Stack(
+      body: const Stack(
         children: [
-          // Blurred background
-          Positioned.fill(
-            child: ImageFiltered(
-              imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-              child: Container(
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/background.jpg'), // Your background image
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // // Blurred background
+          // Positioned.fill(
+          //   child: ImageFiltered(
+          //     imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+          //     child: Container(
+          //       decoration: const BoxDecoration(
+          //         image: DecorationImage(
+          //           image: AssetImage('assets/background.jpg'), // Your background image
+          //           fit: BoxFit.cover,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
           // Weather card
-          Center(
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-              padding: const EdgeInsets.all(20),
-              decoration: const BoxDecoration(
-
-              ),
-              child: const Column(
-                mainAxisSize: MainAxisSize.min,
+          // Center(
+          //   child: Container(
+          //     margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          //     padding: const EdgeInsets.all(20),
+          //     decoration: const BoxDecoration(
+          //
+          //     ),
+               Column(
                 children: [
                   // Location and menu icon
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                   // About Today
                   Text(
                     'About Today',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 22,
+                      fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -87,8 +86,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-          ),
         ],
       ),
     );
